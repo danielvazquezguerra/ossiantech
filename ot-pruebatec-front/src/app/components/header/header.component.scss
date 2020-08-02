@@ -1,0 +1,27 @@
+@import '../../../../../colors.scss';
+
+
+.header-wrapper {
+
+    font-family: 'Gotham', sans-serif;
+
+}
+
+.logo-box {
+    
+    border-bottom: 1px solid white;
+    margin: 0em 0em 2em 5em;
+
+    p {
+        color: white;
+        font-weight: 100;
+    }
+}
+
+.slogan {
+
+    font-family: 'Gotham', sans-serif;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 0.2em;
+}
