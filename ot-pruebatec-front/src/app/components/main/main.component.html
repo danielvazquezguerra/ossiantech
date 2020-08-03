@@ -1,1 +1,35 @@
-<p>main works!</p>
+
+<section class="main-wrapper d-flex w-100 h-100 m-0 p-0">
+
+  <div class="main-left d-flex w-25 h-100 m-0 p-0">
+
+    <app-addform></app-addform>
+
+  </div>
+
+  <div class="main-right d-flex flex-wrap w-75 h-100 m-0 p-3">
+
+
+
+    <div class="card-content">
+
+        <nz-card nzHoverable [nzCover]="coverTemplate">
+
+          <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+
+          <p>Category</p>
+
+        </nz-card>
+
+        <ng-template #coverTemplate>
+
+          <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+
+        </ng-template>
+
+    </div>
+
+  </div>
+
+</section>
+

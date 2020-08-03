@@ -1,0 +1,43 @@
+@import '../../../../../colors.scss';
+
+
+.main-wrapper {
+
+ 
+    border: 1px solid white;
+
+}
+
+.main-left {
+    
+    border: 1px solid black;
+
+    .addform {
+
+        border: 1px solid black;
+        
+    }
+    
+}
+
+.main-right {
+    
+    border: 1px solid white;
+    padding: 2em;
+
+    .card-content {
+
+        width: 300px;
+        height: auto;
+
+        .ant-card {
+        
+            width: 300px;
+
+        }
+
+    }
+
+    
+
+}
