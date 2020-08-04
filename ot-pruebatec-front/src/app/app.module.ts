@@ -19,7 +19,6 @@ import {MatButtonModule} from '@angular/material/button';
 
 
 //AntDesign Components 
-
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
@@ -28,6 +27,7 @@ import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
 import { AddformComponent } from './components/addform/addform.component';
 import { EditComponent } from './components/edit/edit.component';
+import { CardComponent } from './components/card/card.component';
 
 
 registerLocaleData(es);
@@ -39,6 +39,7 @@ registerLocaleData(es);
     MainComponent,
     AddformComponent,
     EditComponent,
+    CardComponent,
     
   ],
   imports: [

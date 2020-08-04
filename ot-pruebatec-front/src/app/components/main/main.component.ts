@@ -29,6 +29,7 @@ export class MainComponent implements OnInit {
   saveData() {
     this.postService.getData().subscribe((res: any) => {
       this.data = res.posts;
+      console.log(res.posts);
     
     });
   }

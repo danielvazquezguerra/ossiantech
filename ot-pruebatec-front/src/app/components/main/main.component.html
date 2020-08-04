@@ -9,23 +9,17 @@
 
   <div class="main-right">
 
-    <div class="card-content" *ngFor="let card of data">
+    <div class="postcard-box" >
 
-        <nz-card nzHoverable [nzCover]="coverTemplate">
+      <!-- <div class="postcard" *ngFor="let card of data">hola</div> -->
 
-          <nz-card-meta nzTitle="{{card.title}}" nzDescription="{{card.description}}"></nz-card-meta>
+      <nz-card class="postcard" nzHoverable [nzCover]="coverTemplate" *ngFor="let card of data">
 
-          <p>{{card.category}}</p>
-
-          <i nz-icon nzType="edit" nzTheme="outline"></i>
-
-        </nz-card>
-
+        <nz-card-meta nzTitle="{{ card.title }}" nzDescription="{{ card.description }}"></nz-card-meta>
         <ng-template #coverTemplate>
-
-          <img alt="example" src="{{card.url}}" />
-
+          <img alt="{{ card.title }}" src="{{ card.url }}" />
         </ng-template>
+      </nz-card>
 
     </div>
 

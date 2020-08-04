@@ -22,29 +22,26 @@
 .main-right {
 
     display: flex;
-    flex-wrap: wrap;
     width: 70%;
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    
-    border: 1px solid black;
     padding: 2em;
+    
+}
 
-    .card-content {
 
-        width: 300px;
+    .postcard-box {
+
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 10px;
+        width: 100%;
         height: auto;
-        border: 1px solid black;
-
-        .ant-card {
         
-            width: 300px;
-
-        }
-
     }
 
-    
-
-}
+    .postcard {
+        width: 300px;
+        height: auto;
+    }

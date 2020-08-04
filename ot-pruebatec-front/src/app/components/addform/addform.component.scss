@@ -9,6 +9,13 @@
     padding: 2em;
     border-right: 5px solid $prussian-blue;
 
+    .form-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
     h1 {
         font-family: 'Gotham', sans-serif;
         font-size: 3em;

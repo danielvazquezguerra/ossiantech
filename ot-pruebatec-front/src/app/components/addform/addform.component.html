@@ -3,36 +3,41 @@
         <h1>Nuevo Post.</h1>
         <p>Aquí puedes incluir un nuevo post. Recuerda elegir entre las dos categorias.</p>
    
-        <mat-form-field appearance="fill">
-          <mat-label>Title</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <br>
-        <mat-form-field appearance="fill">
-          <mat-label>Category</mat-label>
-          <mat-select>
-            <mat-option value="Nature">Nature</mat-option>
-            <mat-option value="Cities">Cities</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <br>
-        <mat-form-field appearance="fill">
-          <mat-label>Description</mat-label>
-          <textarea matInput></textarea>
-        </mat-form-field>
+        <form class="form-box" #addForm="ngForm" (submit)="addCard(addForm)">
 
-        <h2>Añade una foto.</h2>
-        <p>Aquí puedes subir una foto.</p>
+            <mat-form-field appearance="fill">
+              <mat-label>Title</mat-label>
+              <input matInput name="title" title ngModel>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+              <mat-label>Category</mat-label>
+              <mat-select name="category" category ngModel >
+                <mat-option value="Nature" >Nature</mat-option>
+                <mat-option value="Cities" >Cities</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+              <mat-label>Description</mat-label>
+              <textarea matInput name="description" description ngModel ></textarea>
+            </mat-form-field>
+    
+            <h2>Añade una foto.</h2>
+            <p>Aquí puedes subir una foto.</p>
+    
+            <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76" nzListType="picture" name="url" url ngModel>
+                <button nz-button><i nz-icon nzType="upload"></i>Upload</button>
+            </nz-upload>
+    
+            <div class="button-box">
+    
+                <button type="submit" class="btenviar" mat-flat-button color="primary">CREAR POST</button>
+    
+            </div>
+            
+        </form>
 
-        <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76" nzListType="picture" >
-            <button nz-button><i nz-icon nzType="upload"></i>Upload</button>
-        </nz-upload>
-
-        <div class="button-box">
-
-            <button class="btenviar" mat-flat-button color="primary">ENVIAR</button>
-
-        </div>
         
         
 
