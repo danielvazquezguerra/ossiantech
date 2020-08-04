@@ -1,6 +1,7 @@
 <section class="form-wrapper">
 
-
+        <h1>Nuevo Post.</h1>
+        <p>Aquí puedes incluir un nuevo post. Recuerda elegir entre las dos categorias.</p>
    
         <mat-form-field appearance="fill">
           <mat-label>Title</mat-label>
@@ -19,5 +20,21 @@
           <mat-label>Description</mat-label>
           <textarea matInput></textarea>
         </mat-form-field>
+
+        <h2>Añade una foto.</h2>
+        <p>Aquí puedes subir una foto.</p>
+
+        <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76" nzListType="picture" >
+            <button nz-button><i nz-icon nzType="upload"></i>Upload</button>
+        </nz-upload>
+
+        <div class="button-box">
+
+            <button class="btenviar" mat-flat-button color="primary">ENVIAR</button>
+
+        </div>
+        
+        
+
 
 </section>

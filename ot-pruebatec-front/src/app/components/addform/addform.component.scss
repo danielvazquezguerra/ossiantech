@@ -7,5 +7,49 @@
     width: 100%;
     height: auto;
     padding: 2em;
+    border-right: 5px solid $prussian-blue;
+
+    h1 {
+        font-family: 'Gotham', sans-serif;
+        font-size: 3em;
+        font-weight: 800;
+        color: $prussian-blue;
+        margin-bottom: 0.3em;
     
+    }
+
+    h2 {
+
+        font-family: 'Gotham', sans-serif;
+        font-size: 2em;
+        font-weight: 800;
+        color: $prussian-blue;
+        margin-bottom: 0.3em;
+
+    }
+
+    p {
+        width: 60%;
+        color: $blue-sapphire;
+        font-size: 1em;
+        margin-bottom: 1em;
+    }
+
+    .button-box {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .btenviar {
+
+        margin-top: 2em;
+        width: 80%;
+        margin: 0px;
+    }
+
 }
