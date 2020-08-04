@@ -27,6 +27,8 @@ import { es_ES } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
 import { AddformComponent } from './components/addform/addform.component';
+import { EditComponent } from './components/edit/edit.component';
+
 
 registerLocaleData(es);
 
@@ -36,6 +38,8 @@ registerLocaleData(es);
     HeaderComponent,
     MainComponent,
     AddformComponent,
+    EditComponent,
+    
   ],
   imports: [
     BrowserModule,
