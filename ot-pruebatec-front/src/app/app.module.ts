@@ -12,8 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 //Angular Material Components
+import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+
 
 //AntDesign Components 
 
@@ -42,8 +45,10 @@ registerLocaleData(es);
     HttpClientModule,
     NgZorroAntdModule,
     NzCardModule,
+    MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatButtonModule,
   
   ],
   providers: [{ provide: NZ_I18N, useValue: es_ES, }],
