@@ -5,6 +5,7 @@ import { NgForm } from '@angular/forms';
 import { PostService } from '../../services/post.service';
 import { Router } from '@angular/router';
 import { FileItem } from '../../models/fileimg';
+import { MainComponent } from '../main/main.component';
 
 declare var $: any;
 
@@ -19,23 +20,31 @@ export class AddformComponent implements OnInit {
 
   message: Array<any> = [];
   files: FileItem[] = [];
+  data: any;
 
   constructor(
 
     private postService: PostService, 
     private router: Router,
     private notification: NzNotificationService,
+    private main: MainComponent,
     
     ) {}
 
   ngOnInit(): void {}
 
-  addPost(addForm:NgForm) {
+  addPost(addPost:NgForm, imageInput) {
 
-    console.log(addForm);
-
-    this.postService.addPost(addForm.value).subscribe(
+    const postFormData = new FormData();
+    postFormData.set('url', imageInput.files[0]);
+    postFormData.set('title', addPost.value.title);
+    postFormData.set('category', addPost.value.category);
+    postFormData.set('description', addPost.value.description);
+    
+    this.postService.addPost(postFormData).subscribe(
+     
       (res:HttpResponse<object>) => {
+        this.main.getData();
         this.notification.success(
           'Nuevo post ha sido creado',
           res['message']
@@ -47,6 +56,9 @@ export class AddformComponent implements OnInit {
           error['error']
           );
       }
+    
     );
+
   }
+  
 }

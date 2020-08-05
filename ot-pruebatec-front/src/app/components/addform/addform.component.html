@@ -3,7 +3,7 @@
         <h1>Nuevo Post.</h1>
         <p>Aquí puedes incluir un nuevo post. Recuerda elegir entre las dos categorias.</p>
    
-        <form class="form-box" #addForm="ngForm" (ngSubmit)="addPost(addForm)">
+        <form class="form-box" #addForm="ngForm" (ngSubmit)="addPost(addForm, imageInput)">
 
             <mat-form-field appearance="fill">
               <mat-label>Title</mat-label>
@@ -27,7 +27,8 @@
             <p>Aquí puedes subir una foto.</p>
 
             <!--Upload new image-->
-            <upload-app name="url" url ngModel></upload-app>
+            <!-- <upload-app name="url" url ngModel></upload-app> -->
+            <input type="file" ngModel name="url" #imageInput>
     
             <div class="button-box">
     

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { PostService } from '../../services/post.service';
 import { NgForm } from '@angular/forms';
+import { AddformComponent } from '../addform/addform.component';
 declare var $: any;
 
 
@@ -11,6 +12,8 @@ declare var $: any;
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+
+  
 
   data: Array<any> = [];
   dataId: Array<any> = [];

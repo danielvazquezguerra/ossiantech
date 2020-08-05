@@ -33,8 +33,9 @@ export class EditFormComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
-    // this.fillForm();
+    this.fillForm();
     this.getById();
+    
   }
 
   getUrl() {
@@ -47,13 +48,13 @@ export class EditFormComponent implements OnInit {
   fillForm() {
     this.getUrl();
     this.postService.getById(this.id).subscribe((res: any) => {
-
-      res.forEach((element) => {
-        this.title = element.title;
-        this.description = element.description;
-        this.url = element.url;
-        this.category = element.category;
-      });
+      console.log(res);
+      
+        this.title = res.title;
+        this.description = res.description;
+        this.url = res.url;
+        this.category = res.category;
+   
     });
   }
   updatePost(updateForm: NgForm) {
@@ -61,7 +62,7 @@ export class EditFormComponent implements OnInit {
       (res:HttpResponse<object>) => {
         this.notification.success(
           'Post ha sido modificado',
-          res['message']
+          res['message'], 
           );
       },
       (error: HttpErrorResponse) => {

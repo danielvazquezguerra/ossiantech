@@ -1,4 +1,5 @@
 <section class="form-wrapper">
+  
 
         <h1>Editar el post.</h1>
         <p>Ahora rellena con el nuevo contenido</p>
@@ -7,7 +8,9 @@
           
           <mat-form-field appearance="fill">
             <mat-label>Title</mat-label>
-              <input matInput name="title" title ngModel >
+              <input matInput name="title" title [(ngModel)]="title" placeholder="{{title}}">
+
+
               
             </mat-form-field>
             <br>
