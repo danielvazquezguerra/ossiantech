@@ -11,7 +11,7 @@
 
     <div class="postcard-box" >
 
-      <!-- <div class="postcard" *ngFor="let card of data">hola</div> -->
+      <!--iteracion con los posts-->
 
       <nz-card class="postcard" nzHoverable [nzCover]="coverTemplate" *ngFor="let card of data">
 
@@ -21,9 +21,11 @@
           
         </ng-template>
         <h3>{{card.title}}</h3>
-        <p>{{card.category}}</p>
+        <h4>{{card.category}}</h4>
         <p>{{card.description}}</p>
         <a routerLink="update/{{card.id}}"><i nz-icon nzType="edit" nzTheme="outline"></i></a>
+      <a (click)="deletePost(card.id)"><i nz-icon nzType="delete" nzTheme="outline"></i></a>
+        
       </nz-card>
 
     </div>
