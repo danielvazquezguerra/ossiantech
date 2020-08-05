@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
+import { UploadFileComponent } from './components/addform/upload.component'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -40,6 +42,7 @@ registerLocaleData(es);
     AddformComponent,
     EditComponent,
     CardComponent,
+    UploadFileComponent,
     
   ],
   imports: [
@@ -56,6 +59,7 @@ registerLocaleData(es);
     MatButtonModule,
   
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [{ provide: NZ_I18N, useValue: es_ES, }],
   bootstrap: [AppComponent]
 })
