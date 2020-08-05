@@ -23,3 +23,5 @@ $gradient-bottom-right: linear-gradient(135deg, #0e3447ff, #1c668dff, #1c6e96ff,
 $gradient-top-left: linear-gradient(225deg, #0e3447ff, #1c668dff, #1c6e96ff, #282828ff, #ffffffff);
 $gradient-bottom-left: linear-gradient(315deg, #0e3447ff, #1c668dff, #1c6e96ff, #282828ff, #ffffffff);
 $gradient-radial: radial-gradient(#0e3447ff, #1c668dff, #1c6e96ff, #282828ff, #ffffffff);
+
+$transition: 0.1s cubic-bezier(.66,-0.21,.31,1.36);

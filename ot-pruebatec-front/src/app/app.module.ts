@@ -11,8 +11,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 
-
-
 //Angular Material Components
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -28,6 +26,7 @@ import { es_ES } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
 import { AddformComponent } from './components/addform/addform.component';
+import { EditFormComponent } from './components/editform/editform.component';
 import { EditComponent } from './components/edit/edit.component';
 import { CardComponent } from './components/card/card.component';
 
@@ -43,6 +42,7 @@ registerLocaleData(es);
     EditComponent,
     CardComponent,
     UploadFileComponent,
+    EditFormComponent,
     
   ],
   imports: [

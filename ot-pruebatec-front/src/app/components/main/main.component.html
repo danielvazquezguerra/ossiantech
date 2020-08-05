@@ -15,10 +15,15 @@
 
       <nz-card class="postcard" nzHoverable [nzCover]="coverTemplate" *ngFor="let card of data">
 
-        <nz-card-meta nzTitle="{{ card.title }}" nzDescription="{{ card.description }}"></nz-card-meta>
+        <nz-card-meta></nz-card-meta>
         <ng-template #coverTemplate>
           <img alt="{{ card.title }}" src="{{ card.url }}" />
+          
         </ng-template>
+        <h3>{{card.title}}</h3>
+        <p>{{card.category}}</p>
+        <p>{{card.description}}</p>
+        <a routerLink="update/{{card.id}}"><i nz-icon nzType="edit" nzTheme="outline"></i></a>
       </nz-card>
 
     </div>

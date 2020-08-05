@@ -22,20 +22,20 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.saveData();
+    this.getData();
     
   }
 
-  saveData() {
+  getData() {
     this.postService.getData().subscribe((res: any) => {
       this.data = res.posts;
       console.log(res.posts);
     
     });
   }
-  deleteCard(id) {
-    this.postService.deleteData(id).subscribe(() => {
-      this.saveData();
+  deletePost(id) {
+    this.postService.deletePost(id).subscribe(() => {
+      this.getData();
     });
   }
 

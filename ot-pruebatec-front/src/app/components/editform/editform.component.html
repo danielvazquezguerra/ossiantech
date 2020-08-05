@@ -1,0 +1,35 @@
+<section class="form-wrapper">
+
+        <h1>Editar el post.</h1>
+        <p>Ahora rellena con el nuevo contenido</p>
+  
+        <form class="form-box" #updateForm="ngForm" (ngSubmit)="updatePost(updateForm)">
+          
+          <mat-form-field appearance="fill">
+            <mat-label>Title</mat-label>
+              <input matInput name="title" title ngModel >
+              
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+              <mat-label>Category</mat-label>
+              <mat-select name="category" category ngModel >
+                <mat-option value="Nature" >Nature</mat-option>
+                <mat-option value="Cities" >Cities</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+              <mat-label>Description</mat-label>
+              <textarea matInput name="description" description ngModel ></textarea>
+            </mat-form-field>
+            
+            <div class="button-box">
+              
+              <button type="submit" class="btenviar" mat-flat-button color="primary">EDITAR POST</button>
+              
+            </div>
+            
+          </form>
+
+</section>

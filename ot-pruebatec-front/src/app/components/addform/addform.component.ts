@@ -4,7 +4,8 @@ import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { NgForm } from '@angular/forms';
 import { PostService } from '../../services/post.service';
 import { Router } from '@angular/router';
-import { UploadFileComponent } from './upload.component'; 
+import { FileItem } from '../../models/fileimg';
+
 declare var $: any;
 
 @Component({
@@ -17,6 +18,7 @@ declare var $: any;
 export class AddformComponent implements OnInit {
 
   message: Array<any> = [];
+  files: FileItem[] = [];
 
   constructor(
 
@@ -32,19 +34,19 @@ export class AddformComponent implements OnInit {
 
     console.log(addForm);
 
-    // this.postService.addData(addForm.value).subscribe(
-    //   (res: HttpResponse<object>) => {
-    //     this.notification.success(
-    //       'Nuevo post ha sido creado',
-    //       res['message']
-    //       );
-    //   },
-    //   (error: HttpErrorResponse) => {
-    //     this.notification.error(
-    //       'Algo no va',
-    //       error['error']
-    //       );
-    //   }
-    // );
+    this.postService.addPost(addForm.value).subscribe(
+      (res:HttpResponse<object>) => {
+        this.notification.success(
+          'Nuevo post ha sido creado',
+          res['message']
+          );
+      },
+      (error: HttpErrorResponse) => {
+        this.notification.error(
+          'Algo no va',
+          error['error']
+          );
+      }
+    );
   }
 }

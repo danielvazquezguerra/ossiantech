@@ -4,7 +4,11 @@ import { Observable, Observer } from 'rxjs';
 
 @Component({
   selector: 'upload-app',
-  templateUrl: 'upload.component.html',
+  template: `
+    <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76" [nzTransformFile]="transformFile" name="url" ngModel>
+      <button nz-button><i nz-icon nzType="upload"></i> Upload</button>
+    </nz-upload>
+  `
 })
 
 

@@ -26,11 +26,8 @@
             <h2>Añade una foto.</h2>
             <p>Aquí puedes subir una foto.</p>
 
-            <upload-app></upload-app>
-    
-            <!-- <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76" nzListType="picture" name="url" url ngModel>
-                <button nz-button><i nz-icon nzType="upload"></i>Upload</button>
-            </nz-upload> -->
+            <!-- <upload-app name="url" url ngModel></upload-app> -->
+            <input type="file" ngModel name="url" #url>
     
             <div class="button-box">
     
