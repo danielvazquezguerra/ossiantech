@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/post.service';
-import { NgForm } from '@angular/forms';
-import { AddformComponent } from '../addform/addform.component';
+
 declare var $: any;
 
 

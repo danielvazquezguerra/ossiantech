@@ -1,4 +1,5 @@
 
+//no lo quise borrar para hacer algunas pruebas después. Pero realmente no esta haciendo ninguna función. 
 
 export class FileItem {
 
