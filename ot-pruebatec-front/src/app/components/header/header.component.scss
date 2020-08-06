@@ -5,12 +5,14 @@
 
     font-family: 'Gotham', sans-serif;
 
+
 }
 
 .logo-box {
     
     border-bottom: 3px solid $prussian-blue;
     margin: 0em 0em 2em 5em;
+    border-bottom: 0.5em solid $prussian-blue;
 
     .ossian-logo {
         height: 40%;
@@ -26,6 +28,13 @@
         }
 
     }
+
+    .nombre {
+        font-weight: 800;
+        font-size: 1.2em;
+    }
+
+    
 }
 
 .slogan {

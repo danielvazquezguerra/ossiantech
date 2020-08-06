@@ -85,6 +85,19 @@
         margin-top: 2em;
         width: 80%;
         margin: 0px;
+        transition: $transition;
+    }
+
+    .btenviar:hover {
+
+        margin-top: 2em;
+        width: 100%;
+        margin: 0px;
+        transition: $transition;
+    }
+
+    .mat-flat-button.mat-primary {
+        background-color: $prussian-blue ;
     }
 
 }
