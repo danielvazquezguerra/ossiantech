@@ -58,7 +58,9 @@ export class EditFormComponent implements OnInit {
     });
   }
   updatePost(updateForm: NgForm) {
+    this.router.navigate(['/']);
     this.postService.updatePost(this.id, updateForm.value).subscribe(
+      
       (res:HttpResponse<object>) => {
         this.notification.success(
           'Post ha sido modificado',
@@ -71,6 +73,7 @@ export class EditFormComponent implements OnInit {
           error['error']
           );
       }
+      
     );
   }
   getById() {

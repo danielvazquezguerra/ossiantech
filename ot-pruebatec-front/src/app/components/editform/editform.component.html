@@ -8,7 +8,7 @@
           
           <mat-form-field appearance="fill">
             <mat-label>Title</mat-label>
-              <input matInput name="title" title [(ngModel)]="title" placeholder="{{title}}">
+              <input matInput name="title" title [(ngModel)]="title" value="{{title}}">
 
 
               
@@ -16,7 +16,7 @@
             <br>
             <mat-form-field appearance="fill">
               <mat-label>Category</mat-label>
-              <mat-select name="category" category ngModel >
+              <mat-select name="category" category ngModel value="{{category}}">
                 <mat-option value="Nature" >Nature</mat-option>
                 <mat-option value="Cities" >Cities</mat-option>
               </mat-select>
@@ -24,7 +24,7 @@
             <br>
             <mat-form-field appearance="fill">
               <mat-label>Description</mat-label>
-              <textarea matInput name="description" description ngModel ></textarea>
+              <textarea matInput name="description" description ngModel value="{{description}}"></textarea>
             </mat-form-field>
             
             <div class="button-box">
