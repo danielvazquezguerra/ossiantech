@@ -1,38 +1,55 @@
 <section class="form-wrapper">
-  
 
-        <h1>Editar el post.</h1>
-        <p>Ahora rellena con el nuevo contenido</p>
-  
-        <form class="form-box" #updateForm="ngForm" (ngSubmit)="updatePost(updateForm)">
+    <div class="form-content">
+
+          <div class="edit-form-left">
+      
+            <img src="{{url}}" alt="title">
+      
+          </div>
           
-          <mat-form-field appearance="fill">
-            <mat-label>Title</mat-label>
-              <input matInput name="title" title [(ngModel)]="title" value="{{title}}">
-
-
-              
-            </mat-form-field>
-            <br>
-            <mat-form-field appearance="fill">
-              <mat-label>Category</mat-label>
-              <mat-select name="category" category ngModel value="{{category}}">
-                <mat-option value="Nature" >Nature</mat-option>
-                <mat-option value="Cities" >Cities</mat-option>
-              </mat-select>
-            </mat-form-field>
-            <br>
-            <mat-form-field appearance="fill">
-              <mat-label>Description</mat-label>
-              <textarea matInput name="description" description ngModel value="{{description}}"></textarea>
-            </mat-form-field>
+          <div class="edit-form-right">
             
-            <div class="button-box">
+            <h1>Editar el post.</h1>
+            <p>Ahora rellena con el nuevo contenido</p>
+        
+            <form class="form-box" #updateForm="ngForm" (ngSubmit)="updatePost(updateForm)">
               
-              <button type="submit" class="btenviar" mat-flat-button color="primary">EDITAR POST</button>
-              
-            </div>
-            
-          </form>
+              <mat-form-field appearance="fill">
+      
+                <mat-label>Title</mat-label>
+      
+                  <input matInput name="title" title [(ngModel)]="title" value="{{title}}">
+      
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+      
+                  <mat-label>Category</mat-label>
+                  <mat-select name="category" category ngModel value="{{category}}">
+                    <mat-option value="Nature" >Nature</mat-option>
+                    <mat-option value="Cities" >Cities</mat-option>
+                  </mat-select>
+      
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+      
+                  <mat-label>Description</mat-label>
+                  <textarea matInput name="description" description ngModel value="{{description}}"></textarea>
+                </mat-form-field>
+                
+                <div class="button-box">
+                  
+                  <button type="submit" class="btenviar" mat-flat-button color="primary">EDITAR POST</button>
+                  
+                </div>
+                
+              </form>
+      
+          </div>
+
+    </div>
+  
 
 </section>
