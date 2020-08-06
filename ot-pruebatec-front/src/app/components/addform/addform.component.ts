@@ -6,6 +6,8 @@ import { PostService } from '../../services/post.service';
 import { Router } from '@angular/router';
 import { FileItem } from '../../models/fileimg';
 import { MainComponent } from '../main/main.component';
+// import { CardbootComponent } from '../cardboot/cardboot.component';
+
 
 declare var $: any;
 
@@ -28,6 +30,7 @@ export class AddformComponent implements OnInit {
     private router: Router,
     private notification: NzNotificationService,
     private main: MainComponent,
+    // private cardboot: CardbootComponent,
     
     ) {}
 
@@ -44,6 +47,7 @@ export class AddformComponent implements OnInit {
     this.postService.addPost(postFormData).subscribe(
      
       (res:HttpResponse<object>) => {
+        // this.cardboot.getData();
         this.main.getData();
         this.notification.success(
           'Nuevo post ha sido creado',

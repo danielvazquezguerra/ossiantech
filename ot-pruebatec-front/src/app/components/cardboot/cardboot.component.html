@@ -1,0 +1,23 @@
+
+
+<div class="card-columns">
+
+  <div class="card" *ngFor="let card of data">
+
+    <img src="{{card.url}}" class="card-img-top" alt="...">
+
+    <div class="card-body">
+
+      <h3 class="card-title">{{card.title}}</h3>
+      <h4>{{card.category}}</h4>
+      <p class="card-text">{{card.description}}</p>
+
+      <a routerLink="update/{{card.id}}"><i nz-icon nzType="edit" nzTheme="outline"></i></a>
+
+      <a (click)="deletePost(card.id)"><i nz-icon nzType="delete" nzTheme="outline"></i></a>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,17 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/post.service';
-import { NgForm } from '@angular/forms';
-import { AddformComponent } from '../addform/addform.component';
-declare var $: any;
-
-
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  selector: 'app-cardboot',
+  templateUrl: './cardboot.component.html',
+  styleUrls: ['./cardboot.component.scss']
 })
-export class MainComponent implements OnInit {
+export class CardbootComponent implements OnInit {
 
   data: Array<any> = [];
   dataId: Array<any> = [];
@@ -24,10 +19,10 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
 
     this.getData();
-    
+
   }
 
-  getData() {
+   getData() {
     this.postService.getData().subscribe((res: any) => {
       this.data = res.posts;
       console.log(res.posts);

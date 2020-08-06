@@ -34,6 +34,7 @@ import { EditFormComponent } from './components/editform/editform.component';
 import { EditComponent } from './components/edit/edit.component';
 import { CardComponent } from './components/card/card.component';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { CardbootComponent } from './components/cardboot/cardboot.component';
 
 
 registerLocaleData(es);
@@ -48,6 +49,7 @@ registerLocaleData(es);
     CardComponent,
     UploadFileComponent,
     EditFormComponent,
+    CardbootComponent,
 
     
   ],
