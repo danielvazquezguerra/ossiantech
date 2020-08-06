@@ -161,3 +161,9 @@ Para arrancar el servidor tienes que introducir el comando:
 ![Home](https://github.com/danielvazquezguerra/ossiantech-front/blob/feature/HeaderInit/ot-pruebatec-front/src/assets/images/ossian-tech-screenshot-01.jpg?raw=true)
 
 ![EditForm](https://github.com/danielvazquezguerra/ossiantech-front/blob/feature/HeaderInit/ot-pruebatec-front/src/assets/images/ossian-tech-screenshot-02.jpg?raw=true)
+
+
+## Autor
+# Daniel Vazquez Guerra⚡️
+Full StackDeveloper
+
